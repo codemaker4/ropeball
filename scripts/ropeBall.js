@@ -114,22 +114,6 @@ class RopeBallEngine {
                 if (this.balls.y[i] < this.ballRadius) this.balls.y[i] = this.ballRadius;
                 if (this.balls.x[i] > this.width-this.ballRadius) this.balls.x[i] = this.width-this.ballRadius;
                 if (this.balls.y[i] > this.height-this.ballRadius) this.balls.y[i] = this.height-this.ballRadius;
-    
-                // for (let j = i+1; j < this.balls.activeCount; j++) {
-                //     dx = this.balls.x[i] - this.balls.x[j];
-                //     dy = this.balls.y[i] - this.balls.y[j];
-                //     dist = Math.sqrt(dx*dx + dy*dy);
-                //     depth = this.ballRadius*2 - dist;
-                //     if (depth > 0) {
-                //         fac = 1/dist*depth*0.5
-                //         this.balls.x[i] += dx*fac;
-                //         this.balls.y[i] += dy*fac;
-                //         this.balls.x[j] -= dx*fac;
-                //         this.balls.y[j] -= dy*fac;
-                //         this.balls.collisionCount[i] ++;
-                //         this.balls.collisionCount[j] ++;
-                //     }
-                // }
 
                 for (cx = this.balls.cx[i]-1; cx <= this.balls.cx[i]+1; cx++) {
                     for (cy = this.balls.cy[i]-1; cy <= this.balls.cy[i]+1; cy++) {
